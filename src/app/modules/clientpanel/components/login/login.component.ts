@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   signInWithGoogle() {
     this.authService.signInWithGoogle()
       .then((res) => {
@@ -58,9 +57,6 @@ export class LoginComponent implements OnInit {
       .catch((err) => console.log(err));
   }
 
-
-=======
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
   onSubmit() {
     this.authService.login(this.email, this.password)
       .then(res => {

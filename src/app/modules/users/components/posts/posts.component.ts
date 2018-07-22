@@ -14,7 +14,6 @@ export class PostsComponent implements OnInit {
     id: 0,
     title: '',
     body: ''
-<<<<<<< HEAD
   };
   isEdit: boolean;
 
@@ -23,14 +22,6 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-=======
-  }
-  isEdit: boolean = false;
-
-  constructor(private postService: PostService) { }
-
-  ngOnInit() {  
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
     this.postService.getPosts().subscribe(posts => {
       this.posts = posts;
     });
@@ -47,11 +38,7 @@ export class PostsComponent implements OnInit {
 
   onUpdatedPost(post: Post) {
     this.posts.forEach((cur, index) => {
-<<<<<<< HEAD
       if (post.id === cur.id) {
-=======
-      if(post.id === cur.id) {
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
         this.posts.splice(index, 1);
         this.posts.unshift(post);
         this.isEdit = false;
@@ -59,29 +46,17 @@ export class PostsComponent implements OnInit {
           id: 0,
           title: '',
           body: ''
-<<<<<<< HEAD
         };
-=======
-        }
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
       }
     });
   }
 
   removePost(post: Post) {
-<<<<<<< HEAD
     if (confirm('Are You Sure?')) {
       this.postService.removePost(post.id).subscribe(() => {
         this.posts.forEach((cur, index) => {
           if (post.id === cur.id) {
             this.posts.splice(index, 1);
-=======
-    if(confirm('Are You Sure?')) {
-      this.postService.removePost(post.id).subscribe(() => {
-        this.posts.forEach((cur, index) => {
-          if(post.id === cur.id) {
-            this.posts.splice(index, 1);  
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
           }
         });
       });

@@ -21,11 +21,7 @@ export class PostFormComponent implements OnInit {
   }
 
   addPost(title, body) {
-<<<<<<< HEAD
     if (!title || !body) {
-=======
-    if(!title || !body) {
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
       alert('Please add post');
     } else {
       this.postService.savePost({title, body} as Post).subscribe(post => {

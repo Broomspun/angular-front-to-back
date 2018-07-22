@@ -11,11 +11,7 @@ export class SettingsService {
   }
 
   constructor() {
-<<<<<<< HEAD
     if (localStorage.getItem('settings') != null) {
-=======
-    if(localStorage.getItem('settings') != null) {
->>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
       this.settings = JSON.parse(localStorage.getItem('settings'));
     }
   }
