@@ -24,7 +24,11 @@ export class LogFormComponent implements OnInit {
   ngOnInit() {
     // Subscribe to the selectedLog observable
     this.logService.selectedLog.subscribe(log => {
+<<<<<<< HEAD
+      if (log.id !== null) {
+=======
       if(log.id !== null) {
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
         this.isNew = false;
         this.id = log.id;
         this.text = log.text;

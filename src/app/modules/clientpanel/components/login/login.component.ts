@@ -26,6 +26,41 @@ export class LoginComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
+  signInWithGoogle() {
+    this.authService.signInWithGoogle()
+      .then((res) => {
+        this.flashMessage.show('You are now logged in', {
+          cssClass: 'alert-success', timeout: 4000
+        });
+        this.router.navigate(['/client']);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  signInWithTwitter() {
+    this.authService.signInWithTwitter()
+      .then((res) => {
+        this.router.navigate(['/client']);
+      })
+      .catch((err) => console.log(err));
+  }
+
+
+  signInWithGithub() {
+    this.authService.signInWithGithub()
+      .then((res) => {
+        this.flashMessage.show('You are now logged in', {
+          cssClass: 'alert-success', timeout: 4000
+        });
+        this.router.navigate(['/client']);
+      })
+      .catch((err) => console.log(err));
+  }
+
+
+=======
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
   onSubmit() {
     this.authService.login(this.email, this.password)
       .then(res => {

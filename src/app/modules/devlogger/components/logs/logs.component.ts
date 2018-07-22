@@ -20,7 +20,11 @@ export class LogsComponent implements OnInit {
 
   ngOnInit() {
     this.logService.stateClear.subscribe(clear => {
+<<<<<<< HEAD
+      if (clear) {
+=======
       if(clear) {
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
         this.selectedLog = {id: '', text: '', date: ''};
       }
     });

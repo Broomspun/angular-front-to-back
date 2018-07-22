@@ -6,7 +6,11 @@ import { Post } from '../models/Post';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
 
 @Injectable()
 export class PostService {
@@ -14,7 +18,11 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
+<<<<<<< HEAD
+  getPosts(): Observable<Post[]> {
+=======
   getPosts() : Observable<Post[]> {
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
     return this.http.get<Post[]>(this.postsUrl);
   }
 
@@ -22,13 +30,21 @@ export class PostService {
     return this.http.post<Post>(this.postsUrl, post, httpOptions);
   }
 
+<<<<<<< HEAD
+  updatePost(post: Post): Observable<Post> {
+=======
   updatePost(post: Post) :Observable<Post> {
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
     const url = `${this.postsUrl}/${post.id}`;
 
     return this.http.put<Post>(url, post, httpOptions);
   }
 
+<<<<<<< HEAD
+  getPost(id: number): Observable<Post> {
+=======
   getPost(id: number) :Observable<Post> {
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
     const url = `${this.postsUrl}/${id}`;
 
     return this.http.get<Post>(url);

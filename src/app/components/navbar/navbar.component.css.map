@@ -1,7 +1,12 @@
 {
 "version": 3,
+<<<<<<< HEAD
+"mappings": "",
+"sources": [],
+=======
 "mappings": "AAAA,gCAA+B;EAC7B,OAAO,EAAE,KAAK;;AAGhB,mCAAkC;EAChC,8CAA8C;EAC9C,cAAc,EAAE,IAAI",
 "sources": ["navbar.component.scss"],
+>>>>>>> 805dab35150855e311e78d7e4dbeef803aa0c48b
 "names": [],
 "file": "navbar.component.css"
 }
