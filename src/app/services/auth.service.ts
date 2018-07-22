@@ -8,8 +8,12 @@ import {map} from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
+  private user: Observable<firebase.User>;
+  private userDetails: firebase.User = null;
 
-  constructor(private afAuth: AngularFireAuth) { }
+  constructor(private afAuth: AngularFireAuth) {
+    this.user = afAuth.authState;
+  }
 
   login(email: string, password: string) {
     return new Promise((resolve, reject) => {
@@ -54,7 +58,8 @@ export class AuthService {
   }
 
   getAuth() {
-    return this.afAuth.authState.pipe(map(auth => auth));
+    // return this.afAuth.authState.pipe(map(auth => auth));
+    return this.afAuth.authState;
   }
 
   logout() {
